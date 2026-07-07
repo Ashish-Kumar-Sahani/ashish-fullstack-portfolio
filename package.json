@@ -1,0 +1,23 @@
+{
+  "name": "fullstack-development-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "frontend": "cd Frontend && npm run dev",
+    "backend": "cd Backend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/geoip-lite": "^1.4.4",
+    "concurrently": "^10.0.3"
+  },
+  "dependencies": {
+    "recharts": "^3.8.1",
+    "ua-parser-js": "^2.0.10"
+  }
+}

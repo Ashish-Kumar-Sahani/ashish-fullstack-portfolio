@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-50 antialiased;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-slate-300 transition-colors hover:bg-slate-400 dark:bg-slate-800 dark:hover:bg-slate-700;
+}
+
+/* Frosted glassmorphism custom classes */
+.glass-effect {
+  @apply backdrop-blur-md bg-white/70 border border-white/20 shadow-lg dark:bg-slate-950/70 dark:border-slate-800/40;
+}
+
+.glass-card {
+  @apply backdrop-blur-lg bg-white/80 border border-slate-200/50 shadow-xl transition-all duration-300 hover:shadow-2xl dark:bg-slate-900/60 dark:border-slate-800/60;
+}
+
+/* Grid backgrounds for modern aesthetic */
+.grid-bg-light {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.grid-bg-dark {
+  background-image: radial-gradient(rgba(51, 65, 85, 0.2) 1px, transparent 0);
+  background-size: 24px 24px;
+}

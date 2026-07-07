@@ -15,7 +15,15 @@ import visitorRoutes from "./routes/visitor.routes";
 import educationRoutes from "./routes/education.routes";
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+   origin: [
+      "http://localhost:5173",
+      "https://ashish-fullstack-portfolio-pi.vercel.app",
+    ],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/skills", skillRoutes);
